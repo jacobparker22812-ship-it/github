@@ -18,6 +18,14 @@ Account: Agentic (••••6089). Maintained by the robinhood-trade-log skill
 Both orders were placed 2026-09-23 after hours and filled at the
 2026-09-24 open (9:30 AM ET). Fees: $0.00.
 
+## Scheduled installments
+
+Pending installments from lump-sum deposits (dollar-cost averaging).
+
+| Due cycle | Amount | From deposit |
+|---|---|---|
+| None | | |
+
 ## Totals
 
 - Total deposited: $500.00

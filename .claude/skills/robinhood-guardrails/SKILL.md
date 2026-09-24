@@ -34,6 +34,16 @@ limit, and only for that one order.
 - Never set up automatic crypto sells, stop orders, or anything that
   trades without the user's "yes" on that specific order.
 
+## Dollar-cost averaging
+
+- Buy only as part of a scheduled deposit cycle (about every two weeks),
+  following the DCA rules in the robinhood-investing skill.
+- No buys between cycles, including "buying the dip" with the cash
+  buffer, unless the user confirms an off-schedule buy in their own
+  words after being reminded it breaks the DCA plan.
+- Never invest more than about $200 plus any installment due in one
+  cycle. Larger deposits are split into scheduled installments.
+
 ## Money limits
 
 - Never spend more than the account's cash. Ignore margin buying power.

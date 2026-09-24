@@ -41,11 +41,35 @@ Default target allocation for invested money:
   amounts are coins, never "shares".
 - Crypto prices include a buy/sell spread (often 1-2%). Check
   `get_crypto_quotes` and mention the spread before buying.
-- New deposits: split them by the target percentages above.
+- New deposits: split them by the target percentages above, following
+  the dollar-cost averaging rules below.
 - Rebalance only when a holding drifts more than 5 percentage points
   from its target, and prefer rebalancing with new money over selling.
 - Do not sell in response to short-term drops. Hold for the long term.
 - Never use margin. Keep buys within cash buying power.
+
+## Dollar-cost averaging
+
+All buying follows dollar-cost averaging (DCA): fixed amounts, on a
+regular schedule, whatever the price.
+
+- **Schedule:** the user deposits about **$200 every two weeks**. Buys
+  happen only when a scheduled deposit arrives, and are invested that
+  same week.
+- **No timing:** never delay, skip, shrink or enlarge a scheduled buy
+  because prices are up, down, or because of news or indicators (RSI,
+  MACD, moving averages). Indicators are context only.
+- **No extra buys between deposits.** Do not buy dips with the cash
+  buffer or add unscheduled purchases.
+- **Lump sums:** if a deposit is more than twice the usual amount (over
+  $400), do not invest it all at once. Split it into equal installments
+  of about $200, added to the next scheduled buys, and hold the rest in
+  cash until then. Keep a schedule of the pending installments in
+  `investing/trade-log.md`.
+- **Missed or late deposits:** just invest whatever arrives on the next
+  cycle. Do not catch up with extra buys.
+- If the user asks for an off-schedule buy, remind them it breaks the
+  DCA plan and proceed only if they confirm in their own words.
 
 ## Placing orders
 

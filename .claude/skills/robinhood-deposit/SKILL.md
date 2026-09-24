@@ -9,8 +9,21 @@ Follow the robinhood-guardrails skill for every order. The targets come
 from the robinhood-investing skill: VTI 65%, VXUS 20%, BTC 7%, ETH 3%,
 cash 5%.
 
+Every buy follows the dollar-cost averaging rules in the
+robinhood-investing skill: invest scheduled deposits (about $200 every
+two weeks) on arrival, whatever the price, with no extra buys in between.
+
 ## Steps
 
+0. Decide how much of the cash this cycle may invest:
+   - A normal deposit (up to $400): invest all of it this cycle.
+   - A lump sum (over $400): invest about $200 this cycle, and record
+     the remaining installments in `investing/trade-log.md` under
+     "Scheduled installments", one per future two-week cycle.
+   - Also include any installment due this cycle from an earlier lump
+     sum.
+   - Money not due this cycle stays in cash and is not counted as
+     "money to invest" in step 4.
 1. `get_accounts`: find the account nicknamed "Agentic".
 2. `get_portfolio`: note cash, buying power and pending deposits.
    Use buying power (not margin) as the spendable amount.
@@ -22,7 +35,8 @@ cash 5%.
    - New total = current holdings value + cash.
    - Target value for each fund = new total x its target %.
    - Shortfall for each fund = target value - current value (never below 0).
-   - Money to invest = cash - max($25, 5% of new total).
+   - Money to invest = the amount due this cycle from step 0, but never
+     more than cash - max($25, 5% of new total).
    - Spread the money to invest across the funds in proportion to
      their shortfalls. This rebalances without selling.
    - Skip any buy under $1 (Robinhood's minimum for dollar orders) and
