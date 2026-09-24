@@ -12,11 +12,29 @@ Account: Agentic (••••6089). Maintained by the robinhood-trade-log skill
 
 | Date | Symbol | Side | Amount | Shares | Price | State | Reason | Order |
 |---|---|---|---|---|---|---|---|---|
-| 2026-09-23 | VTI | Buy | $350.00 | ~0.925630 (est.) | ~$378.12 (est.) | Queued | Initial investment | 6ab479dd |
-| 2026-09-23 | VXUS | Buy | $125.00 | ~1.454330 (est.) | ~$85.95 (est.) | Queued | Initial investment | 6ab479de |
+| 2026-09-24 | VTI | Buy | $350.00 | 0.929738 | $376.45 | Filled | Initial investment | 6ab479dd |
+| 2026-09-24 | VXUS | Buy | $125.00 | 1.458746 | $85.69 | Filled | Initial investment | 6ab479de |
+
+Both orders were placed 2026-09-23 after hours and filled at the
+2026-09-24 open (9:30 AM ET). Fees: $0.00.
+
+## Dividends
+
+| Date | Fund | Amount | Reinvested | Note |
+|---|---|---|---|---|
+| None yet | | | | |
+
+## Scheduled installments
+
+Pending installments from lump-sum deposits (dollar-cost averaging).
+
+| Due cycle | Amount | From deposit |
+|---|---|---|
+| None | | |
 
 ## Totals
 
 - Total deposited: $500.00
-- Total invested (placed, not yet filled): $475.00
+- Total invested: $475.00 (VTI $350.00, VXUS $125.00)
 - Cash buffer: $25.00
+- Total dividends: $0.00

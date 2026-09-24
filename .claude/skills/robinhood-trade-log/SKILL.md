@@ -12,6 +12,10 @@ permanent record, so keep it accurate and never delete old rows.
 
 - **Deposits:** date and amount, from `get_portfolio` or what the user
   says.
+- **Dividends:** date, fund, amount, and whether it was reinvested by
+  DRIP (with shares and price) or added to the next DCA cycle. DRIP
+  orders appear in `get_equity_orders` with `placed_agent: drip`.
+  Keep a running "Total dividends" line in the Totals section.
 - **Orders:** add a row when an order is placed. Update the same row
   when it fills or is cancelled, using `get_equity_orders` or
   `get_crypto_orders` with the order id for the fill price and

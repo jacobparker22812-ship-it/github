@@ -34,6 +34,16 @@ limit, and only for that one order.
 - Never set up automatic crypto sells, stop orders, or anything that
   trades without the user's "yes" on that specific order.
 
+## Dollar-cost averaging
+
+- Buy only as part of a scheduled deposit cycle (about every two weeks),
+  following the DCA rules in the robinhood-investing skill.
+- No buys between cycles, including "buying the dip" with the cash
+  buffer, unless the user confirms an off-schedule buy in their own
+  words after being reminded it breaks the DCA plan.
+- Never invest more than about $200 plus any installment due in one
+  cycle. Larger deposits are split into scheduled installments.
+
 ## Money limits
 
 - Never spend more than the account's cash. Ignore margin buying power.
@@ -42,6 +52,9 @@ limit, and only for that one order.
   orders with `get_equity_orders` (`created_at_gte` set to today) and
   count every buy that is not cancelled, rejected or failed.
 - At most **4 orders per day**, to stay far from pattern day trader rules.
+- Automatic dividend reinvestment orders (`placed_agent: drip`) do not
+  count toward the daily buy or order limits, and are not
+  off-schedule buys.
 - Never sell more than 25% of the account in one day unless the user
   asks to sell a specific amount.
 
