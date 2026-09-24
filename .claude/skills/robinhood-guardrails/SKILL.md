@@ -14,10 +14,25 @@ limit, and only for that one order.
 
 - Only the account nicknamed "Agentic" (tradable by the agent in
   `get_accounts`). Never any other account.
-- Only these symbols may be bought: **VTI, VXUS**. Anything else needs
-  the user to name the symbol and approve it explicitly.
-- No options, crypto, margin, short selling, or leveraged or inverse
-  ETFs.
+- Only these symbols may be bought: **VTI, VXUS, BTC, ETH**. Anything
+  else needs the user to name the symbol and approve it explicitly.
+- No options, margin, short selling, leveraged or inverse ETFs, or
+  other crypto coins.
+
+## Crypto limits
+
+- Crypto (BTC + ETH together) may never be more than **10%** of the
+  account's total value after an order. Check with `get_portfolio`
+  (`crypto_value`, `total_value`).
+- At most **$100 of crypto buys per calendar day**, counted inside the
+  overall daily buy limit. Check `get_crypto_orders` for today.
+- Use `crypto_buying_power` from `get_portfolio` for crypto, not the
+  stock buying power.
+- If the spread between `bid_price` and `ask_price` in
+  `get_crypto_quotes` is more than **3%** of the mark price, do not buy
+  at market. Wait or ask the user.
+- Never set up automatic crypto sells, stop orders, or anything that
+  trades without the user's "yes" on that specific order.
 
 ## Money limits
 
@@ -32,15 +47,18 @@ limit, and only for that one order.
 
 ## Order mechanics
 
-- Always preview with `review_equity_order` first. If `order_checks`
-  returns any alert, stop and show it to the user.
+- Always preview with `review_equity_order` (stocks) or
+  `preview_crypto_order` (crypto) first. If the preview returns any
+  alert or validation error, stop and show it to the user.
 - Always show the `market_data_disclosure` text verbatim.
-- Always get the user's explicit "yes" before `place_equity_order`.
+- Always get the user's explicit "yes" before `place_equity_order` or
+  `place_crypto_order`.
 - If the price moves more than **3%** between the preview and placing,
   preview again and ask again.
 - Use a fresh UUID `ref_id` per order. Only reuse it to retry the exact
   same order after a transport error.
-- If a placement call errors, check `get_equity_orders` before retrying
+- If a placement call errors, check `get_equity_orders` or
+  `get_crypto_orders` before retrying
   so the same order is never placed twice.
 
 ## Honesty
