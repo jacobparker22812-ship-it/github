@@ -71,6 +71,52 @@ regular schedule, whatever the price.
 - If the user asks for an off-schedule buy, remind them it breaks the
   DCA plan and proceed only if they confirm in their own words.
 
+## Strategy reviews and adding holdings
+
+The user wants to keep accumulating the current holdings, and to add
+other holdings if the plan stops working for them. Review the plan on a
+schedule, never in reaction to a bad week.
+
+**When to review:** every 6 months, and when the account first passes
+$2,500, $5,000 and $10,000. Outside those times, only if the user asks.
+
+**What counts as "not working"** (judge over at least 12 months, not
+weeks):
+
+- A holding trails its own benchmark by more than 1% a year (for
+  example VTI vs. the total US market). Poor results for the whole
+  market are not a reason to change the plan.
+- A holding's cost goes up, it closes, or a clearly cheaper equivalent
+  appears.
+- Crypto swings are too large for the user to stay comfortable holding.
+- The user's goals, timeline or deposit amount change.
+- The account has grown enough that one more building block adds real
+  diversification.
+
+**Candidates that make sense** as the account grows (all broad and
+low-cost; research each with the robinhood-research skill first):
+
+| Candidate | Role | Consider from |
+|---|---|---|
+| BND (Vanguard Total Bond Market) | Steadier ballast; cushions stock drops | $5,000+, or sooner if drops feel too hard |
+| AVUV (small-cap value) | Tilt toward historically higher-returning stocks | $5,000+ |
+| VNQ (US real estate) | Real estate exposure | $10,000+ |
+| SCHD (dividend stocks) | Income tilt | If income becomes a goal |
+
+Single stocks, sector bets, leveraged funds and other coins stay off
+the list.
+
+**How a change happens:**
+
+1. Present the review: what is and isn't working, with numbers.
+2. Propose the change: new holding, new target percentages (always
+   adding to 100%), and why.
+3. The user approves in their own words.
+4. Update this table, the guardrails' allowed symbols, and the deposit
+   targets together in one commit.
+5. Move toward the new mix with new deposits (DCA), not by selling,
+   unless the user asks to sell.
+
 ## Placing orders
 
 1. Check buying power with `get_portfolio` and quotes with
