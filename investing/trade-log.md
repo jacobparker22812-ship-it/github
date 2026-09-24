@@ -20,6 +20,9 @@ Both orders were placed 2026-09-23 after hours and filled at the
 
 ## Dividends
 
+Dividend reinvestment (DRIP) turned on by the user in the Robinhood app on
+2026-09-24. Dividends reinvest automatically into the fund that paid them.
+
 | Date | Fund | Amount | Reinvested | Note |
 |---|---|---|---|---|
 | None yet | | | | |
