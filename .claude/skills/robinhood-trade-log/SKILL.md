@@ -13,8 +13,10 @@ permanent record, so keep it accurate and never delete old rows.
 - **Deposits:** date and amount, from `get_portfolio` or what the user
   says.
 - **Orders:** add a row when an order is placed. Update the same row
-  when it fills or is cancelled, using `get_equity_orders` with the
-  order id for the fill price and quantity.
+  when it fills or is cancelled, using `get_equity_orders` or
+  `get_crypto_orders` with the order id for the fill price and
+  quantity. For crypto, write the quantity as coins (for example
+  `0.000580 BTC`) and include any fee.
 
 ## Rules
 
@@ -35,4 +37,5 @@ permanent record, so keep it accurate and never delete old rows.
 Use the log for history, total deposited and cost basis. For current
 value, always fetch live data; the log is not a price source. For tax
 questions, point out that Robinhood's official 1099 is the record that
-counts.
+counts. Crypto is taxed as property, so every crypto sale is a taxable
+event; mention this if the user asks about selling crypto.

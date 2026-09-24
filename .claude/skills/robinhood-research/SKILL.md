@@ -7,7 +7,13 @@ description: Research a stock or ETF on a fixed checklist using the Robinhood-Tr
 
 This is research, not a trade. Never place orders from this skill. If the
 user then wants to buy, the robinhood-guardrails skill applies; anything
-outside VTI and VXUS needs the user's explicit approval by name.
+outside VTI, VXUS, BTC and ETH needs the user's explicit approval by
+name.
+
+For crypto, most of the stock checklist does not apply. Use
+`get_crypto_quotes` (mark price, spread, change vs. `open_price`) and
+recent news, and be direct about the risks: very large price swings,
+no earnings or dividends, and regulatory uncertainty.
 
 ## Checklist
 
@@ -33,7 +39,7 @@ Call these for the symbol (use `search` first if the name is unclear):
 - **Risks:** the two or three that matter most.
 - **Fit with your portfolio:** overlap with what the user already owns
   (for example, VTI already holds every large US company), and how it
-  compares with the 70/25/5 plan.
+  compares with the 65/20/7/3/5 plan (VTI/VXUS/BTC/ETH/cash).
 - **Bottom line:** a balanced summary. State that this is information,
   not a guarantee. Never predict a price.
 
