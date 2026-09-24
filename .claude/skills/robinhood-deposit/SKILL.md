@@ -21,7 +21,8 @@ two weeks) on arrival, whatever the price, with no extra buys in between.
      the remaining installments in `investing/trade-log.md` under
      "Scheduled installments", one per future two-week cycle.
    - Also include any installment due this cycle from an earlier lump
-     sum.
+     sum, and any dividend cash received since the last cycle (when
+     DRIP is off).
    - Money not due this cycle stays in cash and is not counted as
      "money to invest" in step 4.
 1. `get_accounts`: find the account nicknamed "Agentic".

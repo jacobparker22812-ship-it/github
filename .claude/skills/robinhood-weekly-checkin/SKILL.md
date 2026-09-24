@@ -52,6 +52,8 @@ Then, only if they apply:
 - **Cash waiting:** uninvested cash above the 5% buffer, and a suggested
   split using the robinhood-deposit skill.
 - **Open orders:** anything queued or partially filled.
+- **Dividends:** any received since the last check-in, how they were
+  reinvested, and the running total from the trade log.
 - **Upcoming:** market holidays this week, if known.
 
 End with one plain sentence on the big picture. Never predict returns.

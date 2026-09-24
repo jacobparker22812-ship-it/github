@@ -71,6 +71,26 @@ regular schedule, whatever the price.
 - If the user asks for an off-schedule buy, remind them it breaks the
   DCA plan and proceed only if they confirm in their own words.
 
+## Dividends
+
+VTI and VXUS pay dividends every quarter (roughly March, June,
+September and December). BTC and ETH pay none. Dividends are always
+reinvested, never withdrawn or left idle.
+
+- **Preferred:** the user turns on Robinhood's dividend reinvestment
+  (DRIP) in the app. Each dividend then buys more of the fund that paid
+  it, automatically. Those orders show `placed_agent: drip`.
+- **If DRIP is off:** dividend cash is added to the next scheduled DCA
+  cycle and split by shortfall like any deposit (see the
+  robinhood-deposit skill). Never buy with it between cycles.
+- Record every dividend in `investing/trade-log.md` (robinhood-trade-log
+  skill).
+- Dividends are taxable each year in this account, even when
+  reinvested. Robinhood reports them on the 1099-DIV.
+- Do not chase high-yield funds for the dividends alone. A dividend
+  fund (SCHD) is only added through a strategy review, if income
+  becomes a goal.
+
 ## Strategy reviews and adding holdings
 
 The user wants to keep accumulating the current holdings, and to add

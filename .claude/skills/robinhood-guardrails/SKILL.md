@@ -52,6 +52,9 @@ limit, and only for that one order.
   orders with `get_equity_orders` (`created_at_gte` set to today) and
   count every buy that is not cancelled, rejected or failed.
 - At most **4 orders per day**, to stay far from pattern day trader rules.
+- Automatic dividend reinvestment orders (`placed_agent: drip`) do not
+  count toward the daily buy or order limits, and are not
+  off-schedule buys.
 - Never sell more than 25% of the account in one day unless the user
   asks to sell a specific amount.
 
