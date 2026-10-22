@@ -122,6 +122,13 @@ low-cost; research each with the robinhood-research skill first):
 | AVUV (small-cap value) | Tilt toward historically higher-returning stocks | $5,000+ |
 | VNQ (US real estate) | Real estate exposure | $10,000+ |
 | SCHD (dividend stocks) | Income tilt | If income becomes a goal |
+| GLDM (gold) | Diversifier that moves differently from stocks and bonds | $2,500+ |
+
+**Note for the $2,500 review** (discussed with the user on 2026-10-22): the user is
+interested in more variety. The hypothetical mix discussed was VTI 55%,
+VXUS 17%, AVUV 5%, BND 5%, GLDM 3%, BTC 7%, ETH 3%, cash 5%, phased in
+with new deposits. BND was flagged as the most useful single addition.
+Nothing is approved yet; present this as the starting point at the review.
 
 Single stocks, sector bets, leveraged funds and other coins stay off
 the list.
